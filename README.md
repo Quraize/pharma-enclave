@@ -1,1 +1,1 @@
-Here: 'client' directory contains the frontend.
+Here: 'client' directory contains the frontend. and 'backend' directory contains the server, obviously.
