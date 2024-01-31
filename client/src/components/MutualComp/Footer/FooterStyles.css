@@ -1,0 +1,114 @@
+.footer-main-sec{
+    display: grid; 
+    padding-left: 5rem;
+    padding-right: 4rem; 
+    padding-top: 4rem;
+    padding-bottom: 4rem; 
+    gap: 1.5rem; 
+    color: #D1D5DB; 
+    background: #0c0c0c !important;
+}
+
+.footer-main-heading{
+    width: 100%; 
+    font-size: 1.9rem;
+    line-height: 2.25rem; 
+    font-weight: 700; 
+    color: #1723aa;
+}
+
+.footer-main-para{
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+}
+
+.footer-social-icons{
+    display: flex; 
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-evenly; 
+}
+
+.icon-faceboook:hover{
+    color: #2023cc;
+    cursor: pointer;
+}
+
+.icon-twitter:hover{
+    color:rgb(58, 163, 204);
+    cursor: pointer;
+}
+
+.icon-linkedin:hover{
+    color:rgb(82, 185, 226);
+    cursor: pointer;
+}
+
+.icon-Youtube:hover{
+    color:red;
+    cursor: pointer;
+}
+
+.icon-Insta:hover{
+    color: rgba(238,42,123,1);
+    cursor: pointer;
+}
+
+.footer-content-list{
+    display: flex; 
+    margin-top: 1.5rem; 
+    justify-content: space-evenly; 
+}
+
+.content-list-heading{
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
+    font-weight: 500; 
+    color: #F3F4F6; 
+}
+
+.content-list-items{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+}
+
+.footer-copyright-sec{
+    padding: 0.7rem; 
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media only screen and (max-width: 768px){
+    .footer-main-sec{
+        padding-left: 2rem !important;
+    }
+}
+
+@media (min-width: 768px) { 
+    .footer-social-icons{
+        width: 75%;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .footer-main-sec{
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    }
+    .footer-main-heading{
+        font-size: 2rem;
+        line-height: 2rem; 
+    }
+
+    .footer-content-list{
+        grid-column: span 2 / span 2; 
+    }
+}
+
+@media (min-width: 1280px) { 
+    .footer-main-heading{
+        font-size: 2.5rem;
+        line-height: 1; 
+    }
+}

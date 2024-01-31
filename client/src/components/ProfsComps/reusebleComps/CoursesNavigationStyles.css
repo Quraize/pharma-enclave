@@ -1,0 +1,27 @@
+.navig-main-sec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 8%;
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    background:radial-gradient(circle, rgba(220, 228, 228, 0.63) 16%, rgba(235, 234, 234, 0.452) 60%, rgba(219, 227, 227, 0.418) 85%, rgba(200, 200, 200, 0.295) 100%) !important;
+}
+
+.navg-first-button{
+    flex: 50%;
+    padding-left: 15% !important;
+}
+
+.navg-sec-button{
+    flex: 50%;
+    padding-left: 15% !important;
+}
+
+.navig-button-self{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    height: fit-content;
+    width: 15rem;
+    color: black;
+}

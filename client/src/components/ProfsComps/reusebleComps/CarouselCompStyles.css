@@ -1,0 +1,15 @@
+.trailing-carousel{
+    height: 31rem;
+    width: 35rem;
+    padding-left: 5.9rem;
+    padding-top: 4rem !important;
+}
+
+@media only screen and (max-width: 768px){
+    .trailing-carousel{
+        height: 26rem;
+        width: 23rem;
+        padding-left: 2rem;
+        padding-top: 1rem !important;
+    }
+}

@@ -1,0 +1,31 @@
+.courses-card{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    border-radius: 13px;
+    border-width: 1px !important;
+    border-color: rgba(19, 18, 18, 0.822) !important;
+    border-style: solid !important;
+    transition-duration: 0.5s;
+    box-shadow: 0 6px 8px 0 rgba(134, 134, 134, 0.507), 0 10px 12px 0 rgba(65, 63, 63, 0.479) !important;
+}
+
+.courses-card:hover{
+    cursor: pointer;
+    box-shadow: 0 6px 8px 0 rgba(44, 44, 44, 0.685), 0 10px 12px 0 rgba(59, 59, 59, 0.842) !important;
+}
+
+.coursescard-img{
+    border-style: solid !important;
+    border-width: 0.1px !important;
+    border-color: rgba(83, 83, 83, 0.658) !important;
+    box-shadow: 0 6px 8px 0 rgba(68, 68, 68, 0.507), 0 10px 12px 0 rgba(92, 92, 92, 0.61) !important;
+    border-radius: 10px;
+}
+
+.courses-card-self-button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-weight: 400;
+    background-color:rgba(43, 41, 41, 0.336) !important; 
+    color: rgba(10, 10, 10, 0.911) !important;
+    width: fit-content !important;
+    transition-duration: 0.3s;
+}

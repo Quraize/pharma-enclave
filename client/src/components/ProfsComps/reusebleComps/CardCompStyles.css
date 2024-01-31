@@ -1,0 +1,34 @@
+.cards{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    border-radius: 13px;
+    border-width: 0.3px !important;
+    border-color: rgba(83, 83, 83, 0.822) !important;
+    border-style: solid !important;
+    transition-duration: 0.5s;
+    box-shadow: none !important;
+}
+
+.card-vid{
+    border-style: solid !important;
+    border-width: 0.1px !important;
+    border-color: rgba(83, 83, 83, 0.658) !important;
+    box-shadow: 0 6px 8px 0 rgba(70, 69, 69, 0.507), 0 10px 12px 0 rgba(59, 59, 59, 0.61) !important;
+
+}
+.cards:hover{
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+.card-self-button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    background-color:rgba(43, 41, 41, 0.336) !important; 
+    color: rgba(10, 10, 10, 0.911) !important;
+    width: fit-content !important;
+    transition-duration: 0.3s;
+}
+
+.card-self-button:hover{
+    color: rgba(255, 244, 244, 0.911) !important;
+    background-color: rgb(10, 10, 10) !important;;
+}

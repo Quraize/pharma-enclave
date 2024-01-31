@@ -1,0 +1,149 @@
+.NavbarItems{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  padding: 0 30px;
+  transition: .3s ease-in;
+  background-color: rgba(0, 0, 0, 0.548);/*For changing the colour of the Navbar*/
+  box-shadow: 0 5px 15px #00000040;
+  width: 95%;
+  height: 80px;
+  border-radius: 13px;
+  position: fixed;
+  border: 13px;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.NavbarItems:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*For a full Navbar: visit https://github.com/fireclint/execute-financial/blob/main/src/components/Navbar.css*/
+
+
+.Logo{
+    justify-self: start;
+    cursor: pointer;
+    align-items: center;
+}
+
+.Logo img{
+    width: 130px;
+}
+
+.nav-manu{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+
+.nav-links{
+    text-decoration: none;
+    color: #ffffffd2;  /*For changing the color of the content*/
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+
+.nav-manu i:hover{
+    color: black; /*content hover color*/
+}
+
+
+.nav-links i {
+    padding-right: 15px;
+}
+
+.nav-links:hover{
+    background: rgba(31, 38, 135, 0.8); /*content hover background color*/
+    border-radius: 13px;
+    transition: all 0.2s ease-in-out;
+    color: black;  /*content hover font color*/
+}
+
+.fa-bars , .fa-times{
+    color:rgba(31, 38, 135, 0.8) ;  /*icons color*/
+}
+
+.manu-icons{
+    display: none;
+}
+
+.nav-links-update{
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    background-color:rgba(31, 38, 135, 0.8);
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffffd2;  /*font color*/
+}
+
+.nav-links-update:hover{
+    color: black;  /* hover color*/
+}
+
+@media screen and (max-width: 850px){
+    .NavbarItems{
+        z-index: 99;
+    }
+
+    .nav-manu{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.27);
+        justify-content: flex-start;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border-radius: 13px;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -110%;
+        align-items: stretch;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        z-index: -1;
+        transition:all 0.4s ease-in-out;
+    }
+
+    .nav-manu.active{
+        left: 0%;
+    }
+
+    .nav-links{
+        display: block;
+        widows: 100%;
+        padding: 2rem 0;
+        color: #222;
+    }
+
+    .nav-links:hover{
+        background: rgba(31, 38, 135, 0.8);
+        backdrop-filter: blur(20px);
+        transition: all 0.5ms ease-in-out;
+        width: 88%;
+        margin: auto;
+    }
+    .manu-icons{
+        display: block;
+    }
+
+    .nav-links-update{
+        padding: 1.5rem;
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+        width: 88%;
+        margin: auto;
+    }
+}

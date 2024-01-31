@@ -1,0 +1,111 @@
+.subject-main-sec{
+    width: 100%;
+    min-height: 110vh !important;
+    display: flex;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.801);
+    background:radial-gradient(circle, rgba(220, 228, 228, 0.938) 16%, rgba(235, 234, 234, 0.986) 60%, rgba(219, 227, 227, 0.966) 85%, rgba(200, 200, 200, 0.952) 100%) !important;
+}
+
+.subject-heading-sec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    flex: 50%;
+    padding-left: 5rem;
+    padding-top: 9rem;
+}
+
+.heading-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.subject-icon-self{
+    padding-right: 0.4rem;
+    padding-bottom: 0.6rem;
+}
+
+.subject-top-heading-self{
+    padding-bottom: 1rem;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.subject-heading-self{
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 1.5rem;
+    text-shadow: 3px 4px 5px rgba(80, 77, 77, 0.74);
+}
+
+.subject-para-self{
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+.subject-button-self{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    background-color:rgba(5, 5, 5, 0.897) !important; ;
+    color: white !important;
+    width: fit-content !important;
+    transition-duration: 0.3s;
+}
+
+.subject-button-self:hover{
+    background-color: rgba(43, 41, 41, 0.925) !important;
+}
+.subject-carousel-sec{
+    flex: 50%;
+    padding-left: 3rem;
+    padding-top: 15px;
+    transform: translateY(-1%);
+}
+
+@media only screen and (max-width: 768px){
+    .subject-main-sec{
+        width: 100% !important;
+        height: 140vh !important;
+        display: grid;
+        box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.801);
+        background:radial-gradient(circle, rgba(220, 228, 228, 0.938) 16%, rgba(235, 234, 234, 0.986) 60%, rgba(219, 227, 227, 0.966) 85%, rgba(200, 200, 200, 0.952) 100%) !important;
+    }
+    
+    .subject-heading-sec{
+        grid: 50%;
+        padding-left: 3rem;
+        padding-top: 6rem;
+    }
+
+    .subject-top-heading-self{
+        padding-bottom: 1rem;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .subject-heading-self{
+        font-size: 35px;
+        font-weight: 600;
+        padding-bottom: 1.5rem;
+        text-shadow: 3px 4px 5px rgba(80, 77, 77, 0.74);
+    }
+
+    .subject-para-self{
+        font-size: 15px;
+        font-weight: 500;
+        padding-right: 9rem !important;
+        padding-bottom: 2rem;
+
+    }
+
+    .subject-carousel-sec{
+        grid: 50%;
+        padding-left: 0rem !important;
+        padding-top: 15px;
+        transform: translateY(-1%);
+    }
+
+    .subj-carousel-self{
+        transform: translateX(-12%) !important;
+    }
+}

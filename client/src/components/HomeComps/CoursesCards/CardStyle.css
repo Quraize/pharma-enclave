@@ -1,0 +1,60 @@
+.courses-main-sec{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.courses-heading-sec{
+    flex: 20% !important;
+    text-align: center !important;
+    padding-top: 1.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.courses-heading-self{
+    font-size:40px;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px 4px 5px rgba(80, 77, 77, 0.815);
+}
+
+.courses-para{
+    font-size: large;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px 4px 5px rgba(95, 94, 94, 0.815);
+}
+
+.courses-cards-sec{
+    flex: 80% !important;
+}
+
+.cards-self-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .courses-main-sec{
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-self-sec{
+        display: flex;
+        flex-direction: column;
+        padding-left: 15%;
+        padding-top: 2rem !important;
+        justify-content: space-evenly;
+    }
+
+    .courses-cards-self{
+        padding-bottom: 2rem !important;
+    }
+    
+  }

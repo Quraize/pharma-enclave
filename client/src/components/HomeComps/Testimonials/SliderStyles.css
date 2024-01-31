@@ -1,0 +1,112 @@
+.carousel-sec{
+    height: 480px;
+    justify-content: center !important;
+    justify-items: center !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flexbox !important; ; /*Effective*/
+    align-items: center;
+}
+
+.main-heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 35px;
+    font-weight: 900;
+    font-size:x-large;
+    text-shadow: 3px 4px 5px rgba(80, 77, 77, 0.815);
+    
+}
+
+.detail{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: large;
+    font-weight: 400;
+    text-shadow: 3px 4px 5px rgba(95, 94, 94, 0.815);
+}
+
+.card-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: small;
+    font-weight: 600;
+}
+
+.sub-heading{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size:smaller;
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+.card-message{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
+    font-weight: 400;
+}
+
+.main-carousel-sec{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+}
+
+.review{
+    width: 25rem;
+    margin-inline: 310px;
+    cursor: pointer;
+}
+
+.card{
+    background:radial-gradient(circle, rgba(220, 228, 228, 0.63) 16%, rgba(235, 234, 234, 0.452) 60%, rgba(219, 227, 227, 0.418) 85%, rgba(200, 200, 200, 0.295) 100%) !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    color:black;
+    border: none !important;
+}
+
+.footer{
+    background:rgba(49, 49, 49, 0.199) !important;
+    border-radius: 20px;
+    color: rgba(0, 0, 0, 0.527) !important;
+    width: auto;
+    
+}
+
+@media only screen and (max-width: 768px){
+    .carousel-sec{
+        height: 525px;
+        justify-content: center !important;
+        justify-items: center !important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flexbox !important; ; /*Effective*/
+        align-items: center;
+    }
+    .main-heading{
+        font-size: 18px;
+        font-weight: 550;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .detail{
+        font-size: 12px;
+        font-weight: 400;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .review{
+        margin-inline: 60px;
+        cursor: pointer;
+    }
+    .card{
+        width: 16rem !important;
+    }
+}
