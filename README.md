@@ -1,2 +1,2 @@
-Here: 'client' directory contains the frontend. and 'backend' directory contains the server, obviously.
-envVariables are pushed to hub because if there are any disparity in the code on the machine, it can be fixed using the code on the github.
+Here: the 'client' directory contains the front end. and the 'backend' directory contains the server,obviously. It means one has to run the installation command for the packages both in the root directory and the 'client' directory.
+.envVariables are pushed to Github because if there is any disparity in the code on the machine, it can be fixed using the code on GitHub. Otherwise, .env must not be public.
