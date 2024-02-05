@@ -55,7 +55,7 @@ export default function Footer() {
               <ul>
                   <Link to="/updates"><li className='content-list-items' data-aos="slide-up">News/Updates</li></Link>
                   <Link to="/about"><li className='content-list-items' data-aos="slide-up">Contact Us</li></Link>
-                  <Link to="/admin"><li className='content-list-items' data-aos="slide-up">Admin</li></Link>
+                  <Link to="/authadmin"><li className='content-list-items' data-aos="slide-up">Admin</li></Link>
               </ul>
             </div>
           </div>

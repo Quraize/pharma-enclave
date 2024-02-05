@@ -1,47 +1,29 @@
 import {Foriegni, Foriegnii, Foriegniii} from '../../models/subject.model.js';
 
-const foriegni = async(req, res)=>{
+const foriegni = async(req, res, next)=>{
     try {
         const subjects = await Foriegni.find({});
-
-        if(!subjects){
-            res.status(404).json({message: 'subject(s) not found'});
-        }
-         
         res.json(subjects);
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({message:'internal error'});
+        next(error);
     }
 }
 
-const foriegnii = async(req, res)=>{
+const foriegnii = async(req, res, next)=>{
     try {
         const subjects = await Foriegnii.find({});
-
-        if(!subjects){
-            res.status(404).json({message: 'subject not found'});
-        }
-
         res.json( subjects);
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({message:'internal error'});
+       next(error)
     }
 }
 
-const foriegniii = async(req, res)=>{
+const foriegniii = async(req, res, next)=>{
     try {
         const subjects = await Foriegniii.find({});
-
-        if(!subjects){
-            res.status(404).json({message: 'subject not found'});
-        }
-
         res.json(subjects);
     } catch (error) {
-        console.log(error.message);
-        res.status(500).json({message:'internal error'});
+       next();
     }
 }
 

@@ -1,0 +1,64 @@
+.adminlogin-main-sec{
+    padding-top: 10%;
+    padding-left: 35%;
+    padding-right: 35%;
+    width: 100%;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.adminlogin-self-heading{
+    width: 100%; 
+    font-size: 40px;
+    line-height: 2.25rem; 
+    font-weight: 700; 
+    color: #1723aa;
+    padding-bottom: 1rem;
+    text-shadow: 3px 4px 5px rgba(80, 77, 77, 0.74);
+    text-align: center;
+}
+
+.adminlogin-self-para{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.form-self{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.email-sec-self{
+    margin-bottom: 2rem/* 12px */;
+}
+
+.email-label-self{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.password-sec{
+    margin-bottom: 2rem/* 12px */;
+}
+
+
+.password-label-self{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.button-self{
+    width: fit-content !important;
+    margin-left: 40%;
+    background-color: rgba(10, 10, 10, 0.733) !important;
+}
+
+.button-self:hover{
+    background-color: rgba(10, 10, 10, 0.884) !important;
+}

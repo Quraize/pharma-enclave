@@ -1,6 +1,6 @@
 import {Foriegni, Foriegnii, Foriegniii} from '../../models/subject.model.js';
 
-const foriegni = async (req, res)=>{
+const foriegni = async (req, res, next)=>{
     try {
         const { Id, subject, Detail } = req.body
 
@@ -13,12 +13,11 @@ const foriegni = async (req, res)=>{
 
         res.json({message:'Subject deleted successfully', deletedSubject})
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
-const foriegnii = async (req, res)=>{
+const foriegnii = async (req, res, next)=>{
     try {
         const { Id, subject, Detail } = req.body
 
@@ -31,12 +30,11 @@ const foriegnii = async (req, res)=>{
 
         res.json({message:'Subject deleted successfully', deletedSubject})
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
-const foriegniii = async (req, res)=>{
+const foriegniii = async (req, res, next)=>{
     try {
         const { Id, subject, Detail } = req.body
 
@@ -49,8 +47,7 @@ const foriegniii = async (req, res)=>{
 
         res.json({message:'Subject deleted successfully', deletedSubject})
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 

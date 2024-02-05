@@ -20,6 +20,13 @@
     max-width: 100% !important;
 }
 
+.authadmin{
+    background:radial-gradient(circle, rgba(220, 228, 228, 0.63) 16%, rgba(235, 234, 234, 0.452) 60%, rgba(219, 227, 227, 0.418) 85%, rgba(200, 200, 200, 0.295) 100%) !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    max-width: 100% !important;
+}
+
 @media only screen and (max-width: 768px){
     .home{
         overflow-y: hidden;
@@ -36,6 +43,14 @@
     }
 
     .about{
+        background:radial-gradient(circle, rgba(220, 228, 228, 0.63) 16%, rgba(235, 234, 234, 0.452) 60%, rgba(219, 227, 227, 0.418) 85%, rgba(200, 200, 200, 0.295) 100%) !important;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        max-width: 100% !important;
+        max-height: max-content;
+    }
+
+    .authadmin{
         background:radial-gradient(circle, rgba(220, 228, 228, 0.63) 16%, rgba(235, 234, 234, 0.452) 60%, rgba(219, 227, 227, 0.418) 85%, rgba(200, 200, 200, 0.295) 100%) !important;
         overflow-y: hidden;
         overflow-x: hidden;

@@ -5,10 +5,11 @@ import Home from './pages/Home';
 import Admin from './pages/Admin';
 import About from './pages/About';
 import Updates from './pages/Updates';
-import './App.css';
 import Profs from './pages/Profs/profs';
 import Fexam from './pages/ForiegnEx/Fexam';
 import Cexam from './pages/CompExams/Cexam';
+import AuthAdmin from './pages/AuthAdmin';
+import './App.css';
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path='/profs' element={<Profs/>}/>
         <Route path='/fexam' element={<Fexam/>}/>
         <Route path='/cexam' element={<Cexam/>}/>
+        <Route path='/authadmin' element={<AuthAdmin/>}/>
       </Routes>
     </BrowserRouter>
     </div>

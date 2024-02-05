@@ -2,9 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
-import addAdminRouter from './routes/admin.rout.js';
 import connectDB from './config/db.js';
-//profs routes import
+//profs routes imports
 import {fisrtpostrouter, secpostrouter, thirdpostrouter, fourtposthrouter, fifthpostrouter} from './routes/profs/profs.post.route.js';
 import {fisrtgetrouter, secgetrouter, thirdgetrouter, fourthgetrouter, fifthgetrouter} from './routes/profs/profs.get.route.js';
 import {fisrtdelrouter, secdelrouter, thirddelrouter, fourthdelrouter, fifthdelrouter} from './routes/profs/profs.del.route.js';
@@ -28,7 +27,6 @@ connectDB();
 app.use(express.json());
 
 app.use('/api/user', userRouter);
-app.use('/api/admin', addAdminRouter);
 
 {/*PROFESSIONAL EXAMS SECTION */}
 //to post the data about the subject in the db PROFS
@@ -90,6 +88,17 @@ app.use('/showsubject', thirdCompGetRouter);
 app.use('/deletesubject', firstCompDelRouter);
 app.use('/deletesubject', secCompDelRouter);
 app.use('/deletesubject', thirdCompDelRouter);
+
+//middleware
+app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || 'Internal Server Error';
+    return res.status(statusCode).json({
+        success: false,
+        message,
+        statusCode,
+    });
+});
 
 app.listen(port, ()=>{
     console.log(`Server is listening on the port ${port}`);

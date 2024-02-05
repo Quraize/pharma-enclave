@@ -1,6 +1,6 @@
 import {Compi, Compii, Compiii,} from '../../models/subject.model.js';
 
-const compi = async (req, res)=>{
+const compi = async (req, res, next)=>{
     try {
         const { Id, subject, Detail } = req.body
 
@@ -13,12 +13,11 @@ const compi = async (req, res)=>{
 
         res.json({message:'Subject deleted successfully', deletedSubject})
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
-const compii = async (req, res)=>{
+const compii = async (req, res, next)=>{
     try {
         const { Id, subject, Detail } = req.body
 
@@ -31,12 +30,11 @@ const compii = async (req, res)=>{
 
         res.json({message:'Subject deleted successfully', deletedSubject})
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
-const compiii = async (req, res)=>{
+const compiii = async (req, res, next)=>{
     try {
         const { Id, subject, Detail } = req.body
 
@@ -49,8 +47,7 @@ const compiii = async (req, res)=>{
 
         res.json({message:'Subject deleted successfully', deletedSubject})
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
