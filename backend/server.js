@@ -3,6 +3,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
 import connectDB from './config/db.js';
+//Auth Admin functionalities imports
+import addAdminRoute from './routes/admin/admin.post.route.js';
+import authAdminRoute from './routes/admin/admin.get.route.js';
 //profs routes imports
 import {fisrtpostrouter, secpostrouter, thirdpostrouter, fourtposthrouter, fifthpostrouter} from './routes/profs/profs.post.route.js';
 import {fisrtgetrouter, secgetrouter, thirdgetrouter, fourthgetrouter, fifthgetrouter} from './routes/profs/profs.get.route.js';
@@ -27,6 +30,9 @@ connectDB();
 app.use(express.json());
 
 app.use('/api/user', userRouter);
+{/*Admin-end functionalities  */}
+app.use('/admin', addAdminRoute);
+app.use('/admin', authAdminRoute);
 
 {/*PROFESSIONAL EXAMS SECTION */}
 //to post the data about the subject in the db PROFS

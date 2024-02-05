@@ -1,16 +1,16 @@
 import Admin from '../../models/admin.model.js';
+import bcryptjs from 'bcryptjs';
 
 const addAdmin = async(req, res, next) => {
+    const {name, email, password} = req.body;
+    const hashedPassword = bcryptjs.hashSync(password, 10);
+    const newAdmin = new Admin({name, email, password: hashedPassword});
     try {
-        const {name, email, password} = req.body;
-        const newAdmin = new authAdmin({name, email, password});
-        
-        const adminFind = await Admin.findOne({name: name, email: email, password: password});
-
-        if(adminFind){
-            res.status(400).json({})
-        }
+        await newAdmin.save();
+        res.status(201).json({message:'admin created successfully'})
     } catch (error) {
         next(error);
     }
-}
+};
+
+export default addAdmin;
