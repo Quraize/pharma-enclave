@@ -18,7 +18,7 @@ const subjectsSchema = new mongoose.Schema({
         type: String,
         required:true,
     }
-});
+}, {timestamps: true});
 
 subjectsSchema.pre('save', async function(next){
     const doc = this;
@@ -39,4 +39,18 @@ const Profsiii = mongoose.model('Profsiii', subjectsSchema);
 const Profsiv = mongoose.model('Profsiv', subjectsSchema);
 const Profsv = mongoose.model('Profsv', subjectsSchema);
 
-export { Profsi, Profsii, Profsiii, Profsiv, Profsv};
+//foriegn exams models
+const Foriegni = mongoose.model('Foriegni', subjectsSchema);
+const Foriegnii = mongoose.model('Foriegnii', subjectsSchema);
+const Foriegniii = mongoose.model('Foriegniii', subjectsSchema);
+
+//comp exams models
+const Compi = mongoose.model('Compi', subjectsSchema);
+const Compii = mongoose.model('Compii', subjectsSchema);
+const Compiii = mongoose.model('Compiii', subjectsSchema);
+
+export { 
+    Profsi, Profsii, Profsiii, Profsiv, Profsv, 
+    Foriegni, Foriegnii, Foriegniii,
+    Compi, Compii, Compiii,
+};

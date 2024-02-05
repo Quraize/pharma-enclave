@@ -3,12 +3,21 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
 import addAdminRouter from './routes/admin.rout.js';
+import connectDB from './config/db.js';
+//profs routes import
 import {fisrtpostrouter, secpostrouter, thirdpostrouter, fourtposthrouter, fifthpostrouter} from './routes/profs/profs.post.route.js';
 import {fisrtgetrouter, secgetrouter, thirdgetrouter, fourthgetrouter, fifthgetrouter} from './routes/profs/profs.get.route.js';
 import {fisrtdelrouter, secdelrouter, thirddelrouter, fourthdelrouter, fifthdelrouter} from './routes/profs/profs.del.route.js';
 import {fisrtupdaterouter, secupdaterouter, thirdupdaterouter, fourthupdaterouter, fifthupdaterouter} from './routes/profs/profs.update.route.js';
-import connectDB from './config/db.js';
-
+//foriegn routes imports
+import {firstForiegnPostRouter, secForiegnPostRouter, thirdForiegnPostRouter} from './routes/foriegn/foriegn.post.route.js';
+import { firstForiegnGetRouter, secForiegnGetRouter, thirdForiegnGetRouter} from './routes/foriegn/foriegn.get.route.js';
+import  {firstForiegnDelRouter, secForiegnDelRouter, thirdForiegnDelRouter} from './routes/foriegn/foriegn.del.route.js';
+//competitive routes imports
+import {firstCompPostRouter, secCompPostRouter, thirdCompPostRouter} from './routes/compt/comp.post.route.js';
+import {firstCompGetRouter, secCompGetRouter, thirdCompGetRouter} from './routes/compt/comp.get.route.js';
+import {firstCompDelRouter, secCompDelRouter, thirdCompDelRouter} from './routes/compt/comp.del.route.js';
+ 
 const port = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
@@ -21,34 +30,66 @@ app.use(express.json());
 app.use('/api/user', userRouter);
 app.use('/api/admin', addAdminRouter);
 
-//to post the data about the subject in the db
+{/*PROFESSIONAL EXAMS SECTION */}
+//to post the data about the subject in the db PROFS
 app.use('/addsubject', fisrtpostrouter);
 app.use('/addsubject', secpostrouter);
 app.use('/addsubject', thirdpostrouter);
 app.use('/addsubject', fourtposthrouter);
 app.use('/addsubject', fifthpostrouter);
 
-//to get the data about the subjects from the db
+//to get the data about the subjects from the db PROFS
 app.use('/showsubject', fisrtgetrouter);
 app.use('/showsubject', secgetrouter);
 app.use('/showsubject', thirdgetrouter);
 app.use('/showsubject', fourthgetrouter);
 app.use('/showsubject', fifthgetrouter);
 
-//to delete the data about the subjects from the db
+//to delete the data about the subjects from the db PROFS
 app.use('/deletesubject', fisrtdelrouter);
 app.use('/deletesubject', secdelrouter);
 app.use('/deletesubject', thirddelrouter);
 app.use('/deletesubject', fourthdelrouter);
 app.use('/deletesubject', fifthdelrouter);
 
-//to delete the data about the subjects from the db
+//to delete the data about the subjects from the db PROFS
 app.use('/updatesubject', fisrtupdaterouter);
 app.use('/updatesubject', secupdaterouter);
 app.use('/updatesubject', thirdupdaterouter);
 app.use('/updatesubject', fourthupdaterouter);
 app.use('/updatesubject', fifthupdaterouter);
 
+{/*FORIEGN EXAMS SECTION */}
+//to add the data about the subjects to the db FORIEGN
+app.use('/addsubject', firstForiegnPostRouter);
+app.use('/addsubject', secForiegnPostRouter);
+app.use('/addsubject', thirdForiegnPostRouter);
+
+//to get the data about the subjects from the db FORIEGN
+app.use('/showsubject', firstForiegnGetRouter);
+app.use('/showsubject', secForiegnGetRouter);
+app.use('/showsubject', thirdForiegnGetRouter);
+
+//to delete the data about the subjects from the db FORIEGN
+app.use('/deletesubject', firstForiegnDelRouter);
+app.use('/deletesubject', secForiegnDelRouter);
+app.use('/deletesubject', thirdForiegnDelRouter);
+
+{/*COMPETITIVE EXAMS SECTION */}
+//to add the data about the subjects to the db COMPETITIVE
+app.use('/addsubject', firstCompPostRouter);
+app.use('/addsubject', secCompPostRouter);
+app.use('/addsubject', thirdCompPostRouter);
+
+//to get the data about the subjects from the db COMPETITIVE
+app.use('/showsubject', firstCompGetRouter);
+app.use('/showsubject', secCompGetRouter);
+app.use('/showsubject', thirdCompGetRouter);
+
+//to delete the data about the subjects from the db COMPETITIVE
+app.use('/deletesubject', firstCompDelRouter);
+app.use('/deletesubject', secCompDelRouter);
+app.use('/deletesubject', thirdCompDelRouter);
 
 app.listen(port, ()=>{
     console.log(`Server is listening on the port ${port}`);

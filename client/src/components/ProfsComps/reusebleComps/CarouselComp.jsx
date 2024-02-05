@@ -9,7 +9,7 @@ const CarouselComp = ({Items}) => {
          <div>
             <Carousel data-bs-theme="dark" className='trailing-carousel' indicators  slide touch={true}>
                {items.map((item) => (
-                  <Carousel.Item key={item.id}>
+                  <Carousel.Item key={item.key}>
                      <CardComp Id={item.Id} subject={item.subject} 
                      detail={item.Detail}/>
                   </Carousel.Item>

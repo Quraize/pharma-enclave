@@ -10,38 +10,6 @@ import CoursesNavig from "../../components/ProfsComps/reusebleComps/CoursesNavig
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
-const items = [
-  {
-     index:1,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:2,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:3,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:4,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:5,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  }
-]
 
 export default function Profs() {
   const [profiData, setprofiData] = useState([])
@@ -56,9 +24,8 @@ export default function Profs() {
       try {
         const response = await axios.get(url);
         setData(response.data);
-        console.log(response.data);
       } catch (error) {
-        console.error(`Error fetching data from ${url}:`, error);
+        console.error(`Error fetching data from ${url}:`, error.message);
       }
     };
 

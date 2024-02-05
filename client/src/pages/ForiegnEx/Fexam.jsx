@@ -7,41 +7,33 @@ import { useMediaQuery } from 'react-responsive';
 import '../General.css';
 import Footer from "../../components/MutualComp/footer/Footer";
 import CoursesNavig from "../../components/ProfsComps/reusebleComps/CoursesNavig";
+import axios from 'axios';
+import { useState, useEffect } from "react";
 
-const items = [
-  {
-     index:1,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:2,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:3,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:4,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  },
-  {
-     index:5,
-     Id:'Nq25k-9mVvY',
-     Subject: 'Physiology',
-     Detail: `An introductory lecture by Sir Inaam on 1st Prof's Physiology, touching the minor details that teases the mind of the students.`,
-  }
-]
+
 
 export default function Fexam() {
+   const [foriegniData, setforiegniData] = useState([]);
+   const [foriegniiData, setforiegniiData] = useState([]);
+   const [foriegniiiData, setforiegniiiData] = useState([]);
+
+   useEffect(()=>{
+      const fetchData = async (url, setData) => {
+         try {
+            const response = await axios.get(url);
+            setData(response.data);
+
+         } catch (error) {
+            console.log(`Error fetching data from ${url}:`, error.message);
+            
+         }
+      };
+
+      fetchData('http://localhost:3000/showsubject/foriegni', setforiegniData);
+      fetchData('http://localhost:3000/showsubject/foriegnii', setforiegniiData);
+      fetchData('http://localhost:3000/showsubject/foriegniii', setforiegniiiData);
+   }, []);
+
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const isDesktopOrLaptop = useMediaQuery({
       query: '(min-width: 1224px)'
@@ -50,9 +42,9 @@ export default function Fexam() {
     <div className='profs'>
       {isTabletOrMobile && <Intro Img={mobileImage} title="Foriegn Exams" detail="Charting Success Abroad: Your path to Excellence Starts Now!"/>}
       {isDesktopOrLaptop && <Intro Img={Image1} title="Foriegn Exams" detail="Charting Success Abroad: Your path to Excellence Starts Now!"/>}
-      <TrailComp profNum={'KAPS-I'} items={items} subjName={'KAPS'} examKind={'Foriegn Exams'} subjNumber={'1st'}/>
-      <TrailComp profNum={'KAPS-II'} items={items} subjName={'KAPS'} examKind={'Foriegn Exams'} subjNumber={'2nd'}/>
-      <TrailComp profNum={'KAPS-III'} items={items} subjName={'KAPS'} examKind={'Foriegn Exams'} subjNumber={'3rd'}/>
+      <TrailComp profNum={'KAPS'} items={foriegniData} subjName={'KAPS'} examKind={'Foriegn Exams'} subjNumber={'1st'}/>
+      <TrailComp profNum={'DHA'} items={foriegniiData} subjName={'KAPS'} examKind={'Foriegn Exams'} subjNumber={'2nd'}/>
+      <TrailComp profNum={'FPGEE'} items={foriegniiiData} subjName={'KAPS'} examKind={'Foriegn Exams'} subjNumber={'3rd'}/>
       <CoursesNavig FirstExam={'Professional Exams'} SecExam={'Competitive Exams'}/>
       <Footer/>
       <Sidebar/>
