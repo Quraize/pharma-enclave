@@ -1,5 +1,5 @@
 .adminlogin-main-sec{
-    padding-top: 10%;
+    padding-top: 9%;
     padding-left: 35%;
     padding-right: 35%;
     width: 100%;
@@ -30,10 +30,7 @@
     flex-direction: column;
     justify-content: center;
     justify-items: center;
-}
-
-.email-sec-self{
-    margin-bottom: 2rem/* 12px */;
+    gap: 1rem;
 }
 
 .email-label-self{
@@ -42,8 +39,18 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
-.password-sec{
-    margin-bottom: 2rem/* 12px */;
+.signin-email-pacleholder{
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+    padding: 0.75rem/* 12px */;
+    border-radius: 0.5rem/* 8px */ !important;
+}
+
+.signin-password-placeholder{
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+    padding: 0.75rem/* 12px */;
+    border-radius: 0.5rem/* 8px */;
 }
 
 
@@ -54,11 +61,17 @@
 }
 
 .button-self{
-    width: fit-content !important;
+    width: max-content !important;
     margin-left: 40%;
     background-color: rgba(10, 10, 10, 0.733) !important;
 }
 
 .button-self:hover{
     background-color: rgba(10, 10, 10, 0.884) !important;
+}
+
+.adminlogin-error-handler{
+    margin-top: 1.25rem/* 20px */;
+       --tw-text-opacity: 1;
+    color: rgb(185 28 28 / var(--tw-text-opacity));
 }
