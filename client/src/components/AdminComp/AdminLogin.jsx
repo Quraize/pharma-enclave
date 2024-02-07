@@ -2,6 +2,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import './AdminLoginStyles.css';
+import {signInStart, signInSuccess, signInFailure} from '../../redux/admin/adminSlice';
+import { useDispatch, useSelector } from "react-redux";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -9,10 +11,9 @@ import { useEffect, useState } from "react";
 
 export default function AdminLogin() {
   const [formData, setformData] = useState({});
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const { loading, error } = useSelector((state) => state.admin)
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const handleChange = (e) => {
     setformData({...formData, [e.target.id]: e.target.value})
   };
@@ -20,8 +21,7 @@ export default function AdminLogin() {
   const handleSubmit = async (e) =>{
     e.preventDefault();
     try {
-      setLoading(true);
-      setError(false);
+      dispatch(signInStart());
       const res = await fetch('http://localhost:3000/admin/authadmin', {
         method: 'POST',
         headers: {
@@ -30,17 +30,14 @@ export default function AdminLogin() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      setLoading(false);
-      console.log(data);
       if(data.success === false){
-        setError(true);
+        dispatch(signInFailure(data));
         return;
       }
+      dispatch(signInSuccess(data));
       navigate('/admin')
     } catch (error) {
-      setLoading(false);
-      setError(true);
-      console.log(error);
+      dispatch(signInFailure(error));
     }
   }
 
@@ -90,7 +87,9 @@ export default function AdminLogin() {
           {loading ? 'Loading...' : 'Sign In'}
         </Button>
       </form>
-      <p className="adminlogin-error-handler">{error && 'Somthing went wrong'}</p>
+      <p className="adminlogin-error-handler">
+        {error ? error.message || 'Somthing went wrong' : ''}
+        </p>
     </div>
   );
 }
