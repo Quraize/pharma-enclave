@@ -1,0 +1,54 @@
+.admin-sidebar-main-sec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   display: flex;
+   height: 100vh;
+   
+}
+
+  /*border-right-width: 1px !important;
+    border-right-color: rgba(172, 161, 161, 0.678) !important;
+    border-right-style: solid !important;
+    box-shadow: 0 6px 8px 0 rgba(134, 134, 134, 0.507), 0 10px 12px 0 rgba(65, 63, 63, 0.479) !important;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;*/
+
+.admin-sidebar-self{
+    background: #a8d5e5;
+    border-right-width: 1px !important;
+    border-right-color: rgba(172, 161, 161, 0.678) !important;
+    border-right-style: solid !important;
+    box-shadow: 0 6px 8px 0 rgba(134, 134, 134, 0.507), 0 10px 12px 0 rgba(65, 63, 63, 0.479) !important;
+}
+
+.manu1{
+    margin-top: 2.5rem;
+    margin-bottom: 0.9rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.manu2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    margin-left: 15%;
+    margin-bottom: 0.7rem;
+}
+
+
+.sidebar-content{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 768px){
+    .manu2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+}

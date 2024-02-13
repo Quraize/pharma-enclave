@@ -1,0 +1,17 @@
+.subject-card{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    border-radius: 13px;
+    border-width: 0.3px !important;
+    border-color: rgba(83, 83, 83, 0.822) !important;
+    border-style: solid !important;
+    transition-duration: 0.5s;
+    box-shadow: none !important;
+}
+
+.subject-containing-carousel{
+    height: 3rem;
+}
+
+.subject-number-self{
+    text-align: center;
+}

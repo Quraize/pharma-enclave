@@ -1,0 +1,48 @@
+.dashboard-main-section{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   display: flex;
+   height: 100vh;
+}
+
+.dashboard-content-main-sec{
+    display: flex;
+    flex-direction: column !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.subject-number-heading{
+    padding-left: 60%;
+    font-size: 20px;
+    font-weight: 550;
+    padding-top: 2%;
+    padding-bottom: 2.5%;
+}
+
+.cards-self{
+    display: flex;
+    flex-direction: row;
+    padding-left: 18%;
+    gap: 10%;
+}
+
+@media only screen and (max-width: 768px){
+    .subject-number-heading{
+        padding-left: 28%;
+        font-size: 15px;
+        font-weight: 550;
+        padding-top: 2%;
+        padding-bottom: 3%;
+    }
+    
+    .cards-self{
+        display: grid;
+        grid-column: auto;
+        padding-left: 8%;
+        justify-content: space-evenly;
+    }
+    .subject-card{
+        padding-bottom: 5rem !important;
+    }
+}

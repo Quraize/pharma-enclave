@@ -1,0 +1,12 @@
+.announcement-main-section{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   display: flex;
+   height: 100vh;
+}
+
+.announcement-content-main-sec{
+    display: flex;
+    flex-direction: column !important;
+}

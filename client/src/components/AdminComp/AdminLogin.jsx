@@ -38,7 +38,7 @@ export default function AdminLogin() {
         return;
       }
       dispatch(signInSuccess(data));
-      navigate("/admin");
+      navigate("/admin/dashboard");
     } catch (error) {
       dispatch(signInFailure(error));
     }

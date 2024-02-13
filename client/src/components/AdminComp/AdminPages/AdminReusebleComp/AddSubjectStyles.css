@@ -1,0 +1,51 @@
+.add-subject-main-sec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   display: flex;
+   height: 100vh;
+}
+
+.add-subject-main-heading{
+    font-size: 20px;
+    font-weight: 550;
+    padding-left: 25rem;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.add-subject-form{
+    padding-left: 12rem;
+}
+
+.form-self{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.add-subject-email-label-self{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.add-subject-title-placeholder{
+    --tw-bg-opacity: 1;
+    background-color: rgba(179, 189, 192, 0.479);
+    padding: 0.78rem;
+    width: 40rem;
+    border-radius: 0.5rem/* 8px */ !important;
+}
+
+.button-self{
+    width: max-content !important;
+    margin-left: 40%;
+    background-color: rgba(10, 10, 10, 0.733) !important;
+}
+
+.button-self:hover{
+    background-color: rgba(10, 10, 10, 0.884) !important;
+}
