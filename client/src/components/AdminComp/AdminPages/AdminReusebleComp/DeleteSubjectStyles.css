@@ -1,0 +1,7 @@
+.del-subject-main-sec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   display: flex;
+   height: 100vh;
+}

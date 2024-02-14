@@ -49,3 +49,24 @@
 .button-self:hover{
     background-color: rgba(10, 10, 10, 0.884) !important;
 }
+
+.add-subject-error-handler{
+    margin-top: 1.25rem/* 20px */;
+    --tw-text-opacity: 1;
+ color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.add-subject-success-handler{
+    margin-top: 1.25rem/* 20px */;
+    --tw-text-opacity: 1;
+    color: rgb(56, 138, 2);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.added-subject-message{
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}

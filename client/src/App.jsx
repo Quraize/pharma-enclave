@@ -18,6 +18,14 @@ import Prof2 from './components/AdminComp/AdminPages/AddSubject/Profs/Prof2';
 import Prof3 from './components/AdminComp/AdminPages/AddSubject/Profs/Prof3';
 import Prof4 from './components/AdminComp/AdminPages/AddSubject/Profs/Prof4';
 import Prof5 from './components/AdminComp/AdminPages/AddSubject/Profs/Prof5';
+import Ppsc from './components/AdminComp/AdminPages/AddSubject/Comp/Ppsc';
+import Fpsc from './components/AdminComp/AdminPages/AddSubject/Comp/Fpsc';
+import Nts from './components/AdminComp/AdminPages/AddSubject/Comp/Nts';
+import Kaps from './components/AdminComp/AdminPages/AddSubject/Foriegn/Kaps';
+import Fpgee from './components/AdminComp/AdminPages/AddSubject/Foriegn/Fpgee';
+import Dha from './components/AdminComp/AdminPages/AddSubject/Foriegn/Dha';
+//to delete subject from admin side
+import Prof1Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof1Del';
 
 export default function App() {
   return (
@@ -35,11 +43,20 @@ export default function App() {
         <Route path='/authadmin' element={<AuthAdmin/>}/>
         <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
         <Route path='/admin/announcement' element={<Announcement/>}/>
+        {/*paths to add subject */}
         <Route path='/admin/prof1/addsubject' element={<Prof1/>}/>
         <Route path='/admin/prof2/addsubject' element={<Prof2/>}/>
         <Route path='/admin/prof3/addsubject' element={<Prof3/>}/>
         <Route path='/admin/prof4/addsubject' element={<Prof4/>}/>
         <Route path='/admin/prof5/addsubject' element={<Prof5/>}/>
+        <Route path='/admin/ppsc/addsubject' element={<Ppsc/>}/>
+        <Route path='/admin/fpsc/addsubject' element={<Fpsc/>}/>
+        <Route path='/admin/nts/addsubject' element={<Nts/>}/>
+        <Route path='/admin/kaps/addsubject' element={<Kaps/>}/>
+        <Route path='/admin/dha/addsubject' element={<Dha/>}/>
+        <Route path='/admin/fpgee/addsubject' element={<Fpgee/>}/>
+        {/*paths to delete subject */}
+        <Route path='/admin/prof1/deletesubject' element={<Prof1Del/>}/>
       </Routes>
     </BrowserRouter>
     </div>

@@ -40,14 +40,14 @@ export default function AdminSidebar() {
               <MenuItem icon={<LuPencilLine/>} component={<Link to="/admin/prof5/addsubject" className="link" />}>Prof. 5</MenuItem>
             </SubMenu>
             <SubMenu label="Compet. Exams" className='sidebar-content' icon={<FaMedal/>}>
-              <MenuItem icon={<LuPencilRuler/>}>PPSC</MenuItem>
-              <MenuItem icon={<LuPencilRuler/>}>FPSC</MenuItem>
-              <MenuItem icon={<LuPencilRuler/>}>NTS</MenuItem>
+              <MenuItem icon={<LuPencilRuler/>} component={<Link to="/admin/ppsc/addsubject" className="link" />}>PPSC</MenuItem>
+              <MenuItem icon={<LuPencilRuler/>} component={<Link to="/admin/fpsc/addsubject" className="link" />}>FPSC</MenuItem>
+              <MenuItem icon={<LuPencilRuler/>} component={<Link to="/admin/nts/addsubject" className="link" />}>NTS</MenuItem>
             </SubMenu>
             <SubMenu label="Foriegn Exams" className='sidebar-content' icon={<FaPlaneDeparture/>}>
-              <MenuItem icon={<GiMedicines />}>DHA</MenuItem>
-              <MenuItem icon={<GiMedicines />}>KAPS</MenuItem>
-              <MenuItem icon={<GiMedicines />}>FPGEE</MenuItem>
+              <MenuItem icon={<GiMedicines />} component={<Link to="/admin/dha/addsubject" className="link" />}>DHA</MenuItem>
+              <MenuItem icon={<GiMedicines />} component={<Link to="/admin/kaps/addsubject" className="link" />}>KAPS</MenuItem>
+              <MenuItem icon={<GiMedicines />} component={<Link to="/admin/fpgee/addsubject" className="link" />}>FPGEE</MenuItem>
             </SubMenu>
           </SubMenu>
           <SubMenu label="Delete Subject" icon={ <MdDeleteOutline/> } className='sidebar-content' >
@@ -94,14 +94,14 @@ export default function AdminSidebar() {
               <MenuItem icon={<LuPencilLine/>} component={<Link to="/admin/prof5/addsubject" className="link" />}>Prof. 5</MenuItem>
             </SubMenu>
             <SubMenu label="Compet. Exams" className='sidebar-content' icon={<FaMedal/>}>
-              <MenuItem icon={<LuPencilRuler/>}>PPSC</MenuItem>
-              <MenuItem icon={<LuPencilRuler/>}>FPSC</MenuItem>
-              <MenuItem icon={<LuPencilRuler/>}>NTS</MenuItem>
+              <MenuItem icon={<LuPencilRuler/>} component={<Link to="/admin/ppsc/addsubject" className="link" />} >PPSC</MenuItem>
+              <MenuItem icon={<LuPencilRuler/>} component={<Link to="/admin/fpsc/addsubject" className="link" />}>FPSC</MenuItem>
+              <MenuItem icon={<LuPencilRuler/>} component={<Link to="/admin/nts/addsubject" className="link" />}>NTS</MenuItem>
             </SubMenu>
             <SubMenu label="Foriegn Exams" className='sidebar-content' icon={<FaPlaneDeparture/>}>
-              <MenuItem icon={<GiMedicines />}>DHA</MenuItem>
-              <MenuItem icon={<GiMedicines />}>KAPS</MenuItem>
-              <MenuItem icon={<GiMedicines />}>FPGEE</MenuItem>
+              <MenuItem icon={<GiMedicines />} component={<Link to="/admin/dha/deletesubject" className="link" />}>DHA</MenuItem>
+              <MenuItem icon={<GiMedicines />} component={<Link to="/admin/kaps/deletesubject" className="link" />}>KAPS</MenuItem>
+              <MenuItem icon={<GiMedicines />} component={<Link to="/admin/fpgee/deletesubject" className="link" />}>FPGEE</MenuItem>
             </SubMenu>
           </SubMenu>
           <SubMenu label="Delete Subject" icon={ <MdDeleteOutline/> } className='sidebar-content' >
