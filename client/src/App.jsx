@@ -26,6 +26,10 @@ import Fpgee from './components/AdminComp/AdminPages/AddSubject/Foriegn/Fpgee';
 import Dha from './components/AdminComp/AdminPages/AddSubject/Foriegn/Dha';
 //to delete subject from admin side
 import Prof1Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof1Del';
+import Prof2Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof2Del';
+import Prof3Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof3Del';
+import Prof4Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof4Del';
+import Prof5Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof5Del';
 
 export default function App() {
   return (
@@ -57,6 +61,10 @@ export default function App() {
         <Route path='/admin/fpgee/addsubject' element={<Fpgee/>}/>
         {/*paths to delete subject */}
         <Route path='/admin/prof1/deletesubject' element={<Prof1Del/>}/>
+        <Route path='/admin/prof2/deletesubject' element={<Prof2Del/>}/>
+        <Route path='/admin/prof3/deletesubject' element={<Prof3Del/>}/>
+        <Route path='/admin/prof4/deletesubject' element={<Prof4Del/>}/>
+        <Route path='/admin/prof5/deletesubject' element={<Prof5Del/>}/>
       </Routes>
     </BrowserRouter>
     </div>

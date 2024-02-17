@@ -1,51 +1,48 @@
 import {Foriegni, Foriegnii, Foriegniii} from '../../models/subject.model.js';
 
 const foriegni = async (req, res, next)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Foriegni.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Foriegni.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
         next(error);
     }
 }
 
 const foriegnii = async (req, res, next)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Foriegnii.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Foriegnii.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
         next(error);
     }
 }
 
 const foriegniii = async (req, res, next)=>{
+   const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Foriegniii.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Foriegniii.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
         next(error);
     }

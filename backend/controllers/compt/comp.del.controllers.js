@@ -1,51 +1,48 @@
 import {Compi, Compii, Compiii,} from '../../models/subject.model.js';
 
 const compi = async (req, res, next)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Compi.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Compi.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
         next(error);
     }
 }
 
 const compii = async (req, res, next)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Compii.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Compii.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
         next(error);
     }
 }
 
 const compiii = async (req, res, next)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Compiii.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Compi.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
         next(error);
     }

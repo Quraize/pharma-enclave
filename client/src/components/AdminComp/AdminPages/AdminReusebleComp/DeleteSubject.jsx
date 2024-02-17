@@ -1,20 +1,17 @@
-import './DeleteSubjectStyles.css';
-import AdminSidebar from '../../SidebarComp/AdminSidebar';
-import ListGroup from 'react-bootstrap/ListGroup';
+import "./DeleteSubjectStyles.css";
+import AdminSidebar from "../../SidebarComp/AdminSidebar";
+import TableDelSubject from "./TableDelSubject";
 
-export default function DeleteSubject() {
-  return (
-    <div className='home del-subject-main-sec'>
-    <div><AdminSidebar/></div>
-    <div>
-     <ListGroup>
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-        <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-        <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-         <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-     </ListGroup>
+export default function DeleteSubject({SubTitle, Items, URL}) {
+    return (
+    <div className="home del-subject-main-sec">
+      <div>
+        <AdminSidebar />
+      </div>
+      <div>
+        <div><h1 className="del-subject-main-heading">Provided Subjects in the {SubTitle}</h1></div>
+        <div><TableDelSubject CourseName={SubTitle} SubjItems={Items} URL={URL}/></div>
+      </div>
     </div>
-    </div>
-  )
+  );
 }

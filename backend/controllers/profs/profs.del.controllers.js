@@ -1,92 +1,83 @@
 import { Profsi, Profsii, Profsiii, Profsiv, Profsv} from '../../models/subject.model.js';
+import { errorHandler } from '../../utils/error.handler.js';
 
-const profi = async (req, res)=>{
+const profi = async (req, res, next)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Profsi.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Profsi.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
 const profii = async (req, res)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Profsii.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Profsii.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
 const profiii = async (req, res)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Profsiii.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Profsiii.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
 const profiv = async (req, res)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Profsiv.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Profsiv.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 
 const profv = async (req, res)=>{
+    const { Id, subject, Detail } = req.body
     try {
-        const { Id, subject, Detail } = req.body
-
-        const deletedSubject = await Profsv.findOneAndDelete({Id: Id, subject: subject});
+        const deletedSubject = await Profsv.findOneAndDelete({ subject: subject});
 
         if(!deletedSubject){
-            res.status(404).json({message:'Subject not found.'});
-            return
+            next(errorHandler(404, "Subject not Found"));
+            return;
         }
 
-        res.json({message:'Subject deleted successfully', deletedSubject})
+        res.status(201).json({message:'subject deleted successfully'});
     } catch (error) {
-        console.log("Error deleting subject", error.message);
-        res.status(500).json({message:'internal server error'});
+        next(error);
     }
 }
 

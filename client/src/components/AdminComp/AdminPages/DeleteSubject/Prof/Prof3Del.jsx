@@ -2,10 +2,8 @@ import { useEffect, useState } from "react";
 import DeleteSubject from "../../AdminReusebleComp/DeleteSubject"
 import axios from "axios";
 
-
-
-export default function Prof1Del() {
-    const [profiData, setprofiData] = useState([]);
+export default function Prof3Del() {
+    const [profiiiData, setprofiiiData] = useState([]);
 
     useEffect(()=>{
         const fetchData = async (url, setData) => {
@@ -17,11 +15,11 @@ export default function Prof1Del() {
             }
           };
 
-          fetchData('http://localhost:3000/showsubject/profi', setprofiData);
+          fetchData('http://localhost:3000/showsubject/profiii', setprofiiiData);
     }, [])
   return (
     <div>
-        <DeleteSubject SubTitle={'Prof 1'} Items={profiData} URL={"http://localhost:3000/deletesubject/profi"}/>
+        <DeleteSubject SubTitle={'Prof 3'} Items={profiiiData} URL={"http://localhost:3000/deletesubject/profiii"}/>
     </div>
   )
 }

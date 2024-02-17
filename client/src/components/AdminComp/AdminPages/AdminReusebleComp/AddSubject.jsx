@@ -3,12 +3,14 @@ import '../../../../pages/General.css';
 import AdminSidebar from '../../SidebarComp/AdminSidebar';
 import Button from "react-bootstrap/Button";
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addStart, addSuccess, addFailure } from '../../../../redux/adminAction/addSlice.js';
 
 export default function AddSubject({SubTitle, pageLink, URL}) {
     const [formData, setformData] = useState({});
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    const {loading, error} = useSelector((state) => state.add);
     const [successMessage, setSuccessMessage] = useState(false);
+    const dispacth = useDispatch();
 
     const handleChange = (e) =>{
         setformData({...formData, [e.target.name]: e.target.value})
@@ -17,8 +19,7 @@ export default function AddSubject({SubTitle, pageLink, URL}) {
     const handleSubmit = async (e) =>{
         e.preventDefault();
         try {
-            setLoading(true);
-            setError(false);
+            dispacth(addStart());
             const response = await fetch(URL, {
                 method: "POST",
                 headers: {
@@ -27,22 +28,16 @@ export default function AddSubject({SubTitle, pageLink, URL}) {
                 body: JSON.stringify(formData),
               });
             const data = await response.json();
-            setLoading(false);
             if(data.success === false){
-                setError(true);
+                dispacth(addFailure(data));
                 return;
             }
+            dispacth(addSuccess(data));
             setSuccessMessage(true);
             //resetting the form fields
-            setformData({
-                Id: '',
-                Subject: '',
-                Detail: ''
-            });
+            setformData({});
         } catch (error) {
-            console.log(error.message);
-            setLoading(false);
-            setError(true);
+            dispacth(addFailure(error));
         }
     }
   return (

@@ -1,0 +1,64 @@
+.del-table-main-sec{
+    padding-left: 14.5rem;
+}
+
+.del-accordian-self{
+   width: 40rem;
+}
+
+.del-accordion-header{
+    font-weight: 550;
+}
+
+.del-accordian-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.del-subject-label{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    padding-bottom: 0.8rem;
+}
+
+.del-subj-placeholder-sec{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.5rem;
+    row-gap: 2%;
+}
+
+.del-subject-placeholder{
+    --tw-bg-opacity: 1;
+    background-color: rgba(179, 189, 192, 0.479);
+    padding: 0.78rem;
+    width: 30rem;
+    border-radius: 0.5rem/* 8px */ !important;
+    justify-self: center !important;
+}
+
+.del-subject-button-self{
+    width: max-content !important;
+    background-color: rgba(224, 15, 15, 0.733) !important;
+    justify-self: self-end !important;
+    margin-left: 1rem;
+}
+
+.del-subject-error-handler{
+    margin-top: 1.25rem/* 20px */;
+    --tw-text-opacity: 1;
+ color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
+.del-subject-success-handler{
+    margin-top: 1.25rem/* 20px */;
+    --tw-text-opacity: 1;
+    color: rgb(56, 138, 2);
+    font-size: 15px;
+    font-weight: 500;
+}
