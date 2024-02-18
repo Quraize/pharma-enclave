@@ -1,4 +1,5 @@
 import {Foriegni, Foriegnii, Foriegniii} from '../../models/subject.model.js';
+import { errorHandler } from '../../utils/error.handler.js';
 
 const foriegni = async (req, res, next)=>{
     const { Id, subject, Detail } = req.body

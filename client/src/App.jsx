@@ -30,6 +30,12 @@ import Prof2Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof2
 import Prof3Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof3Del';
 import Prof4Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof4Del';
 import Prof5Del from './components/AdminComp/AdminPages/DeleteSubject/Prof/Prof5Del';
+import DelDha from './components/AdminComp/AdminPages/DeleteSubject/Foriegn/DelDha';
+import DelFpgee from './components/AdminComp/AdminPages/DeleteSubject/Foriegn/DelFpgee';
+import DelKaps from './components/AdminComp/AdminPages/DeleteSubject/Foriegn/DelKaps';
+import DelPpsc from './components/AdminComp/AdminPages/DeleteSubject/Comp/DelPpsc';
+import DelFpsc from './components/AdminComp/AdminPages/DeleteSubject/Comp/DelFpsc';
+import DelNts from './components/AdminComp/AdminPages/DeleteSubject/Comp/DelNts';
 
 export default function App() {
   return (
@@ -65,6 +71,13 @@ export default function App() {
         <Route path='/admin/prof3/deletesubject' element={<Prof3Del/>}/>
         <Route path='/admin/prof4/deletesubject' element={<Prof4Del/>}/>
         <Route path='/admin/prof5/deletesubject' element={<Prof5Del/>}/>
+        <Route path='/admin/kaps/deletesubject' element={<DelKaps/>}/>
+        <Route path='/admin/dha/deletesubject' element={<DelDha/>}/>
+        <Route path='/admin/fpgee/deletesubject' element={<DelFpgee/>}/>
+        <Route path='/admin/ppsc/deletesubject' element={<DelPpsc/>}/>
+        <Route path='/admin/fpsc/deletesubject' element={<DelFpsc/>}/>
+        <Route path='/admin/nts/deletesubject' element={<DelNts/>}/>
+
       </Routes>
     </BrowserRouter>
     </div>

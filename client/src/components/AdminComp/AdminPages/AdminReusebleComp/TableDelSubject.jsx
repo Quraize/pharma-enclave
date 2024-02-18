@@ -40,6 +40,7 @@ export default function TableDelSubject({CourseName, SubjItems, URL}) {
             setDocument({
                 subject: ""
             });
+            window.location.reload();
         } catch (error) {
             dispacth(delFailure(error));
         }

@@ -5,18 +5,20 @@ import delReducer from './adminAction/delSlice.js';
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-const rootReducer = combineReducers({ admin: adminReducer, add: addReducer, delete: delReducer});
-
 const persistConfig = {
     key: 'root',
     version: 1,
     storage,
+    whitelist: ['admin']
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const rootReducer = combineReducers({ admin: persistReducer(persistConfig, adminReducer),
+   add: addReducer,
+    delete: delReducer,
+  });
 
 export const store = configureStore({
-    reducer: persistedReducer,
+    reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         serializableCheck: false,
