@@ -2,9 +2,14 @@ import { Compi, Compii, Compiii } from "../../models/subject.model.js";
 
 const compi = async (req, res, next) => {
   const {Id, subject, Detail } = req.body
-  const newSubject = new Compi({Id, subject, Detail});
-  const existingSubject = await Compi.findOne({subject});
   try {
+      if(!Id || !subject || !Detail){
+          next(errorHandler(401, "Please Provide the necessary credentials."));
+          return;
+      }
+      const newSubject = new Compi({Id, subject, Detail});
+      const existingSubject = await Compi.findOne({subject});
+
       if(existingSubject){
           next(errorHandler(409, "Subject with this name Already exist."))
           return;
@@ -18,9 +23,14 @@ const compi = async (req, res, next) => {
 
 const compii = async (req, res, next) => {
   const {Id, subject, Detail } = req.body
-  const newSubject = new Compii({Id, subject, Detail});
-  const existingSubject = await Compii.findOne({subject});
   try {
+      if(!Id || !subject || !Detail){
+          next(errorHandler(401, "Please Provide the necessary credentials."));
+          return;
+      }
+      const newSubject = new Compii({Id, subject, Detail});
+      const existingSubject = await Compii.findOne({subject});
+
       if(existingSubject){
           next(errorHandler(409, "Subject with this name Already exist."))
           return;
@@ -34,9 +44,14 @@ const compii = async (req, res, next) => {
 
 const compiii = async (req, res, next) => {
   const {Id, subject, Detail } = req.body
-  const newSubject = new Compiii({Id, subject, Detail});
-  const existingSubject = await Compiii.findOne({subject});
   try {
+      if(!Id || !subject || !Detail){
+          next(errorHandler(401, "Please Provide the necessary credentials."));
+          return;
+      }
+      const newSubject = new Compiii({Id, subject, Detail});
+      const existingSubject = await Compiii.findOne({subject});
+
       if(existingSubject){
           next(errorHandler(409, "Subject with this name Already exist."))
           return;

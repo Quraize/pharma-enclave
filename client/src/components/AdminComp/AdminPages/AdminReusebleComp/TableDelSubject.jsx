@@ -6,7 +6,6 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { delStart, delSuccess, delFailure } from "../../../../redux/adminAction/delSlice.js";
 
-
 export default function TableDelSubject({CourseName, SubjItems, URL}) {
     let eventKey = -1;
     const [document, setDocument] = useState({});

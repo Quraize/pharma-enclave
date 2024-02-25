@@ -2,11 +2,17 @@ import './AddSubjectStyles.css';
 import '../../../../pages/General.css';
 import AdminSidebar from '../../SidebarComp/AdminSidebar';
 import Button from "react-bootstrap/Button";
+import SuccessAlert from './SuccessAlert.jsx';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addStart, addSuccess, addFailure } from '../../../../redux/adminAction/addSlice.js';
 
-export default function AddSubject({SubTitle, pageLink, URL}) {
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
+
+export default function AddSubject({SubTitle, URL}) {
     const [formData, setformData] = useState({});
     const {loading, error} = useSelector((state) => state.add);
     const [successMessage, setSuccessMessage] = useState(false);
@@ -30,6 +36,7 @@ export default function AddSubject({SubTitle, pageLink, URL}) {
             const data = await response.json();
             if(data.success === false){
                 dispacth(addFailure(data));
+                window.location.reload();
                 return;
             }
             dispacth(addSuccess(data));
@@ -40,13 +47,21 @@ export default function AddSubject({SubTitle, pageLink, URL}) {
             dispacth(addFailure(error));
         }
     }
+
+    useEffect(() => {
+        AOS.init({
+          duration : 1300,
+          easing: 'ease-in-out-back'
+        });
+    }, []);
+
   return (
     <div className='home add-subject-main-sec'>
         <div><AdminSidebar/></div>
         <div className='add-subject-content-sec'>
-            <h1 className='add-subject-main-heading'>Add Subject to {SubTitle}</h1>
+            <h1 className='add-subject-main-heading' data-aos='slide-right'>Add Subject to {SubTitle}</h1>
             <div className='add-subject-form'>
-                <form className='form-self' onSubmit={handleSubmit}>
+                <form className='form-self' onSubmit={handleSubmit} data-aos='slide-left'>
                     <label className='add-subject-email-label-self'>Youtube Video Id</label>
                     <input type='text' placeholder='Nq25k-9mVvY (Make Sure it is valid)' name='Id' className='add-subject-title-placeholder' required onChange={handleChange}/>
                     <label className='add-subject-email-label-self'>Subject Title</label>
@@ -56,11 +71,9 @@ export default function AddSubject({SubTitle, pageLink, URL}) {
                     <Button variant='secondary' disabled={loading} className='button-self' type='submit'>{loading ? "Adding..." : "Add Subject"}</Button>
                 </form>
                 <p className="add-subject-error-handler">
-                    {error ? error.message || "Somthing went wrong" : ""}
+                    {error ? <SuccessAlert SubTitle={''} Variant={'danger'} message={error.message}/> || "Somthing went wrong" : ""}
                 </p>
-                <p className='add-subject-success-handler'>{successMessage ? `Subject Added Successfully to ${SubTitle}` : ""}</p>
-                <a href={pageLink}><span className='added-subject-message' >{successMessage ? "See the added Subject": ""}</span></a>
-            </div>
+                <p className='add-subject-success-handler'>{successMessage ? <SuccessAlert SubTitle={SubTitle} Variant={'success'} message={'Subject added successfuly to'}/> : ""}</p>            </div>
         </div>
     </div>
   )

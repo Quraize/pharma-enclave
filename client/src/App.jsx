@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import About from './pages/About';
-import Updates from './pages/Updates';
+import Announce from './pages/Announce';
 import Profs from './pages/Profs/profs';
 import Fexam from './pages/ForiegnEx/Fexam';
 import Cexam from './pages/CompExams/Cexam';
@@ -46,7 +46,7 @@ export default function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/admin' element={<Admin/>}/>
-        <Route path='/updates' element={<Updates/>}/>
+        <Route path='/updates' element={<Announce/>}/>
         <Route path='/profs' element={<Profs/>}/>
         <Route path='/fexam' element={<Fexam/>}/>
         <Route path='/cexam' element={<Cexam/>}/>
